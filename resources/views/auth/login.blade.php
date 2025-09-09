@@ -19,14 +19,15 @@
       <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-7 col-lg-5 col-xl-4">
           <div class="text-center mb-4">
-            <div class="fw-bold fs-4 brand">AplikasiKu</div>
+            <div class="fw-bold fs-4 brand">TODOAPP</div>
             <div class="text-muted">Silakan masuk ke akun Anda</div>
           </div>
 
           <div class="card shadow-sm border-0">
             <div class="card-body p-4 p-md-4">
-              <form class="needs-validation" action="/login" method="post" novalidate>
+              <form class="needs-validation" action="{{ route('auth.handleLogin') }}" method="post" novalidate>
                 <!-- Jika pakai framework, tambahkan CSRF token di sini -->
+                @csrf
 
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
@@ -37,7 +38,7 @@
                 <div class="mb-3">
                   <label for="password" class="form-label">Kata Sandi</label>
                   <div class="input-group" id="passwordWrapper">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" minlength="6" required>
+                    <input type="password" class="form-control" id="password" name="password" minlength="6" required>
                     <button class="btn btn-outline-secondary" type="button" id="togglePassword" aria-label="Tampilkan/Sembunyikan kata sandi">Tampilkan</button>
                     <div class="invalid-feedback">Kata sandi minimal 6 karakter.</div>
                   </div>
@@ -61,7 +62,7 @@
             </div>
           </div>
 
-          <p class="text-center text-muted mt-3 mb-0 small">&copy; <span id="year"></span> AplikasiKu</p>
+          <p class="text-center text-muted mt-3 mb-0 small">&copy; <span id="year"></span> TODOAPP</p>
         </div>
       </div>
     </div>

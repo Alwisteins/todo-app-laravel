@@ -94,7 +94,7 @@
       </a>
       <ul class="dropdown-menu dropdown-menu-end">
         <li><a class="dropdown-item" href="/todo/create">New Todo</a></li>
-        <li><a class="dropdown-item" href="#">Logout</a></li>
+        <li><a class="dropdown-item" href="{{ route('auth.logout') }}">Logout</a></li>
       </ul>
     </div>
   </div>

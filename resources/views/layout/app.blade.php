@@ -90,7 +90,7 @@
     </a>
     <div class="ms-auto dropdown">
       <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-        Hi, There
+        Hi, {{ Auth::user()->name }}
       </a>
       <ul class="dropdown-menu dropdown-menu-end">
         <li><a class="dropdown-item" href="/todo/create">New Todo</a></li>
